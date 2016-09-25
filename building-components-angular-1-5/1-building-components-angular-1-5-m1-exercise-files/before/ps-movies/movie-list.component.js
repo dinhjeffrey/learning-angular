@@ -22,6 +22,7 @@
         // $onInit Called on each controller after all the controllers on an element have been constructed and had their bindings initialized (and before the pre & post linking functions for the directives on this element).
         // This is a good place to put initialization code for your controller.
         // lifecycle hook where we can push model initialization into a method that is distinct and separate from construction of controller
+        // initialize response data we get back from http get method and set it equal to local variable in controller function
         vm.$onInit = function () {
             fetchMovies($http).then(function(movies) {
                 vm.movies = movies;

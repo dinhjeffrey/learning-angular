@@ -14,6 +14,7 @@
         <th>Rating</th>
         <th></th>
     </tr>
+    <!-- ngRepeat - directive instantiates a template once per item from a collection. Each template instance gets its own scope -->
     <tr ng-repeat="movie in vm.movies">
         <td>{{movie.title}}</td>
         <td>{{movie.length}}</td>
