@@ -51,7 +51,7 @@
     */
     module.component("movieList", {
         templateUrl: "./ps-movies/movie-list.component.html",
-        controllerAs: "vm",
+        controllerAs: "vm", // use controllerAs syntax, so we're not manipulating a scope object directly
         controller: ["$http", controller] // minifying code can break annotations, so we pass in an array of annotations
 
     })

@@ -12,13 +12,20 @@
         <th>Title</th>
         <th>Length</th>
         <th>Rating</th>
-        <th></th>
+        <th>
+
+        </th>
     </tr>
     <!-- ngRepeat - directive instantiates a template once per item from a collection. Each template instance gets its own scope -->
     <tr ng-repeat="movie in vm.movies">
         <td>{{movie.title}}</td>
         <td>{{movie.length}}</td>
-        <td>{{movie.rating}}</td>
+        <td>
+            <!-- set value from component because we have a binding with the "<" sign -->
+            <movie-rating value="movie.rating">
+                <span class="glyphicon glyphicon-star"></span>
+            </movie-rating>
+        </td>
         <td>
             <!-- div.btn-group -->
             <div class="btn-group">
