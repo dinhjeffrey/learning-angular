@@ -12,16 +12,28 @@
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">At The Movies</a>
             </div>
+            <!-- ul.nav.navbar-nav.navbar-left>li*2 -->
+            <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <a href="#/list">List</a>
+                </li>
+                <li>
+                    <a href="#/about">About</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
     <div class="container">
         {{5+444}}
-       <movie-list></movie-list>
+        <!-- ng-view coordinates with router configuration
+               that says load this template in components -->
+       <ng-view></ng-view>
                 
     </div>
 
-    <script src="bower_components/angular/angular.js"></script>   
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="ps-movies/module.js"></script>
     <script src="ps-movies/movie-list.component.js"></script>
     <script src="ps-movies/movie-rating.component.js"></script>
