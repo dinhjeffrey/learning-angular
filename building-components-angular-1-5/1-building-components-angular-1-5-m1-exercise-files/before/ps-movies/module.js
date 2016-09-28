@@ -1,11 +1,11 @@
 (function() {
     "use strict";
 
-    // tell angular I have a dependency on the route module
+    // tell angular I have a dependency on the route module - ngComponentRouter
     var module = angular.module("psMovies", ["ngComponentRouter"]);
 
     // inject service $routerRootComponent. component name: movieApp
-    // now component router knows top level routing and navigation rules
+    // now component router knows top level routing and navigation rules - root component is movieApp / movie-app
     module.value("$routerRootComponent", "movieApp");
 
     // original router *, load to templates instead of components
