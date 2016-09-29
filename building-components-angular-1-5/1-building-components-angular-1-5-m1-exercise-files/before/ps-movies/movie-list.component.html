@@ -28,7 +28,7 @@
         </td>
         <td>
             <!-- div.btn-group -->
-            <div class="btn-group">
+
                 <!-- button.btn.btn-default -->
                 <button class="btn btn-default" ng-click="vm.upRating(movie)">
                     <!-- span.glyphicon.glyphicon-plus -->
@@ -42,7 +42,11 @@
 
                     </span>
                 </button>
-            </div>
+
+            <a ng-link="['Details', {id: movie.id}]" class="btn btn-default">
+                <span class="glyphicon glyphicon-zoom-in"></span>
+            </a>
+
         </td>
     </tr>
 </table>
